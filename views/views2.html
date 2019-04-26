@@ -14,6 +14,7 @@
 </check>
 <form action="#" method="POST">
     <select name="color">
+        <option value="none">--Select--</option>
         <repeat group="{{@colors}}" value="@colorOption">
             <option>{{@colorOption}}</option>
         </repeat>
