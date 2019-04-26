@@ -9,9 +9,11 @@
 </head>
 <body>
 
-
+<check if="{{ isset(@errors.color)}}">
+    <p>{{@errors.color}}</p>
+</check>
 <form action="#" method="POST">
-    <select>
+    <select name="color">
         <repeat group="{{@colors}}" value="@colorOption">
             <option>{{@colorOption}}</option>
         </repeat>
