@@ -12,10 +12,9 @@
 
 <form action="results" method="POST">
     <select>
-        <option value="pink">pink</option>
-        <option value="blue">blue</option>
-        <option value="manbearpig">manbearpig</option>
-        <option value="green">green</option>
+        <repeat group="{{@colors}}" value="@colorOption">
+            <option>{{@colorOption}}</option>
+        </repeat>
     </select>
     <button type="submit">Submit</button>
 </form>

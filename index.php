@@ -9,6 +9,8 @@ require_once('vendor/autoload.php');
 
 $f3 = Base::instance();
 
+$f3->set('colors', array('pink', 'green', 'blue'));
+
 $f3->route('GET|POST /', function (){
     echo "<h1>My Pets</h1>";
     echo "<a href='order'>Order a Pet</a>";
