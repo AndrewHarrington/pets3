@@ -45,3 +45,5 @@ $f3->route("GET|POST /results", function($f3){
     $view = new Template();
     echo $view->render("views/results.html");
 });
+
+$f3->run();
