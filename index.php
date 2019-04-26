@@ -60,6 +60,21 @@ $f3->route("GET|POST /order", function($f3){
 });
 
 $f3->route("GET|POST /order2", function($f3){
+
+    if($_SERVER['REQUEST_METHOD'] == 'POST')
+    {
+        if(validColor($_POST['color']))
+        {
+            $_SESSION['color'] = $_POST['color'];
+            $f3->reroute("/results");
+        }
+        else
+        {
+            $f3->set("errors['color']", "Please enter a color");
+        }
+    }
+
+
     $view = new Template();
     echo $view->render("views/views2.html");
 });
